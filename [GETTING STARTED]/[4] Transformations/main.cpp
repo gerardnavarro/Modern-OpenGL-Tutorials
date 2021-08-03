@@ -147,7 +147,7 @@ int main( )
         ourShader.Use( );
         
         // Create transformations
-        glm::mat4 transform;
+        glm::mat4 transform = glm::mat4(1.0f);
         transform = glm::translate( transform, glm::vec3( 0.5f, -0.5f, 0.0f ) );
         transform = glm::rotate( transform, ( GLfloat)glfwGetTime( ) * -5.0f, glm::vec3( 0.0f, 0.0f, 1.0f ) );
         
