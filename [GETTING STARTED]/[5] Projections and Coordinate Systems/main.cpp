@@ -233,8 +233,8 @@ int main()
         ourShader.Use( );
         
         // Create transformations
-        glm::mat4 model;
-        glm::mat4 view;
+        glm::mat4 model = glm::mat4( 1.0f );
+        glm::mat4 view = glm::mat4( 1.0f );
         model = glm::rotate( model, ( GLfloat)glfwGetTime( ) * 1.0f, glm::vec3( 0.5f, 1.0f, 0.0f ) ); // use with perspective projection
         //model = glm::rotate( model, 0.5f, glm::vec3( 1.0f, 0.0f, 0.0f ) ); // use to compare orthographic and perspective projection
         //view = glm::translate( view, glm::vec3( screenWidth / 2, screenHeight / 2, -700.0f ) ); // use with orthographic projection
