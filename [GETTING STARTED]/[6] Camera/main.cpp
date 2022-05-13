@@ -216,11 +216,11 @@ int main( )
         glBindTexture( GL_TEXTURE_2D, texture );
         glUniform1i( glGetUniformLocation( ourShader.Program, "ourTexture1" ), 0 );
         
-        glm::mat4 projection;
+        glm::mat4 projection = glm::mat4( 1.0f );
         projection = glm::perspective(camera.GetZoom( ), (GLfloat)SCREEN_WIDTH/(GLfloat)SCREEN_HEIGHT, 0.1f, 1000.0f);
         
         // Create camera transformation
-        glm::mat4 view;
+        glm::mat4 view = glm::mat4( 1.0f );
         view = camera.GetViewMatrix( );
 
         // Get the uniform locations
@@ -237,7 +237,7 @@ int main( )
         for( GLuint i = 0; i < 10; i++ )
         {
             // Calculate the model matrix for each object and pass it to shader before drawing
-            glm::mat4 model;
+            glm::mat4 model = glm::mat4( 1.0f );
             model = glm::translate( model, cubePositions[i] );
             GLfloat angle = 20.0f * i;
             model = glm::rotate(model, angle, glm::vec3( 1.0f, 0.3f, 0.5f ) );
