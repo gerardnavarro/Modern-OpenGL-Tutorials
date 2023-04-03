@@ -56,7 +56,7 @@ int main( )
     glViewport( 0, 0, screenWidth, screenHeight );
     
     // Build and compile our shader program
-    Shader ourShader( "core.vs", "core.frag" );
+    Shader ourShader( "res/shaders/core.vs", "res/shaders/core.frag" );
     
     
     // Set up vertex data (and buffer(s)) and attribute pointers
